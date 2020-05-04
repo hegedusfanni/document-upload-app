@@ -28,7 +28,9 @@ export class LoginComponent implements OnInit {
       const savedUser = JSON.parse(localStorage.getItem('user'));
       const user = {username: this.form.controls.username.value, password: this.form.controls.password.value} as LoginModel;
       if (isEqual(savedUser, user)) {
+        localStorage.setItem('signin', 'ok');
         console.log('Sikeres bejelentkezés');
+        // TODO: navigation
       } else {
        this.invalidUsernameAndPassword = true;
       }

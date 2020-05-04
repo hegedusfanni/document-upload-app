@@ -7,11 +7,11 @@ import {Router} from '@angular/router';
   templateUrl: './nav-menu.component.html',
   styleUrls: ['./nav-menu.component.scss']
 })
-export class NavMenuComponent implements OnInit {
+export class NavMenuComponent {
 
   constructor(public authService: AuthService, public router: Router) { }
 
-  ngOnInit() {
+  onLogout() {
+   this.authService.onLogout();
   }
-
 }
