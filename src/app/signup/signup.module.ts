@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SignupComponent } from './components/signup/signup.component';
+import {SharedModule} from '../shared/shared.module';
 
 
 
@@ -8,7 +9,8 @@ import { SignupComponent } from './components/signup/signup.component';
   declarations: [SignupComponent],
   entryComponents: [SignupComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class SignupModule { }

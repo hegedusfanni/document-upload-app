@@ -8,9 +8,11 @@ export class AuthService {
   constructor() { }
 
   get isAuthenticated(): boolean {
-    return false;
-    // TODO
-    // return !!this.getToken();
+    return !!this.getToken();
+  }
+
+  getToken(): string {
+    return localStorage.getItem('user');
   }
 
 }
