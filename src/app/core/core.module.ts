@@ -7,6 +7,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import {SignupModule} from '../signup/signup.module';
 import {SharedModule} from '../shared/shared.module';
 import {LoginModule} from '../login/login.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -17,7 +18,9 @@ import {LoginModule} from '../login/login.module';
     AppRoutingModule,
     SignupModule,
     SharedModule,
-    LoginModule
+    LoginModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class CoreModule { }
