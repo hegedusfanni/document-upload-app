@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import {Router} from '@angular/router';
-import {LoginModel} from '../../../models/login/login.model';
 import { isEqual } from 'lodash';
+import {LoginModel} from '../../../models/login/login.model';
 
 @Component({
   selector: 'app-login',
@@ -29,8 +29,7 @@ export class LoginComponent implements OnInit {
       const user = {username: this.form.controls.username.value, password: this.form.controls.password.value} as LoginModel;
       if (isEqual(savedUser, user)) {
         localStorage.setItem('signin', 'ok');
-        console.log('Sikeres bejelentkezés');
-        // TODO: navigation
+        this.router.navigate(['/documents']);
       } else {
        this.invalidUsernameAndPassword = true;
       }

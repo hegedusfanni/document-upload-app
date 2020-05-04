@@ -20,12 +20,12 @@ const routes: Routes = [
     // canLoad: [],
     children: [{ path: '', component: LoginComponent}]
   },
-  // {
-  //   path: 'documents',
-  //   // TODO
-  //   // canload: []
-  //   loadChildren: () => import('./documents/documents.module').then(l => l.DocumentsModule),
-  // },
+  {
+    path: 'documents',
+    // TODO
+    // canload: []
+    loadChildren: () => import('./documents/documents.module').then(l => l.DocumentsModule),
+  },
   { path: '**', redirectTo: '' }
 ];
 
