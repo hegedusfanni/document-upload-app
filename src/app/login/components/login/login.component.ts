@@ -11,6 +11,7 @@ import { isEqual } from 'lodash';
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
+  invalidUsernameAndPassword = false;
 
   constructor(private fb: FormBuilder,
               public router: Router) { }
@@ -29,7 +30,7 @@ export class LoginComponent implements OnInit {
       if (isEqual(savedUser, user)) {
         console.log('Sikeres bejelentkezés');
       } else {
-        console.log ('Sikertelen bejelentkezés');
+       this.invalidUsernameAndPassword = true;
       }
     }
   }
