@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ClickDirective} from './directives/click.directive';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 
 
@@ -10,11 +12,14 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   exports: [
     ClickDirective,
     FormsModule,
-    ReactiveFormsModule]
+    ReactiveFormsModule,
+    NgbModule
+  ]
 })
 export class SharedModule { }
