@@ -14,4 +14,5 @@ export class NavMenuComponent {
   onLogout() {
    this.authService.onLogout();
   }
+
 }

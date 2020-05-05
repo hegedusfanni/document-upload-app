@@ -8,6 +8,7 @@ import {SignupModule} from '../signup/signup.module';
 import {SharedModule} from '../shared/shared.module';
 import {LoginModule} from '../login/login.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {DocumentsModule} from '../documents/documents.module';
 
 
 
@@ -20,7 +21,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     SharedModule,
     LoginModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    DocumentsModule
   ]
 })
 export class CoreModule { }

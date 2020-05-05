@@ -8,15 +8,3 @@
   z-index: 1000;
 }
 
-.left-navbar {
-  position: fixed;
-  z-index: 99;
-  margin-top: $upper-navbar-height;
-  float: left;
-  overflow-y: auto;
-  overflow-x: hidden;
-  top: 0;
-  bottom: 0;
-  background-color: $color-default-blue-light;
-  width: $navmenu-width;
-}
