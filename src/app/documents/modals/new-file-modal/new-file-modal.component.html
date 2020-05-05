@@ -1,11 +1,25 @@
 <div class="modal-header">
   <h4 class="modal-title float-left">File upload</h4>
-  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+  <button type="button" class="close" aria-label="Close" (click)="onClose()">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
 <div class="modal-body">
   <div>
-    <!--todo-->
+    <div class="message" *ngIf="(isReady$ | async) || (hasFailed$ | async)">
+      <input #file type="file" multiple (change)="uploadFile($event)" />
+    </div>
+    <div class="message" *ngIf="(isInProgress$ | async)">
+      <div style="margin-bottom: 14px;">Uploading... {{ progress$ | async }}%</div>
+    </div>
+    <div class="message" *ngIf="(completed$ | async)">
+      <h4>
+        File has been uploaded successfully!
+      </h4>
+      <button (click)="resetUpload()">Upload Another File</button>
+    </div>
+    <div class="message error" *ngIf="(hasFailed$ | async)">
+      Error: {{ error$ | async }}
+    </div>
   </div>
 </div>

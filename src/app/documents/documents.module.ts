@@ -5,6 +5,7 @@ import {SharedModule} from '../shared/shared.module';
 import {DocumentsRoutingModule} from './documents-routing.module';
 import { NewFileModalComponent } from './modals/new-file-modal/new-file-modal.component';
 import { DocumentsWrapperComponent } from './components/documents-wrapper/documents-wrapper.component';
+import {FileUploadStoreModule} from '../file-upload-store/file-upload-store.module';
 
 
 
@@ -14,7 +15,8 @@ import { DocumentsWrapperComponent } from './components/documents-wrapper/docume
   imports: [
     CommonModule,
     SharedModule,
-    DocumentsRoutingModule
+    DocumentsRoutingModule,
+    FileUploadStoreModule
   ]
 })
 export class DocumentsModule { }
