@@ -39,7 +39,6 @@ export class UploadFileEffects {
   }
 
   private getActionFromHttpEvent(event: HttpEvent<any>) {
-    console.log(event);
     switch (event.type) {
       case HttpEventType.Sent: {
         return new fromFileUploadActions.UploadStartedAction();
